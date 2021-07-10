@@ -1,0 +1,402 @@
+body {
+  direction: ltr;
+  text-align: left;
+}
+
+.owl-carousel {
+  direction: ltr;
+}
+
+#scroll-top {
+  right: 15px;
+  left: auto;
+}
+
+.slideInRight {
+  animation-name: slideInLeft;
+}
+
+.slideInLeft {
+  animation-name: slideInRight;
+}
+
+.mr-1, .mx-1 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+.mr-2, .mx-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+.mr-3, .mx-3 {
+  margin-right: 0 !important;
+  margin-left: 1rem !important;
+}
+
+.mr-4, .mx-4 {
+  margin-right: 0 !important;
+  margin-left: 1.5rem !important;
+}
+
+.mr-md-2, .mx-md-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+.mr-sm-4, .mx-sm-4 {
+  margin-right: 0 !important;
+  margin-left: 1.5rem !important;
+}
+
+.ml-3, .mx-3 {
+  margin-right: 1rem !important;
+  margin-left: 0 !important;
+}
+
+
+form .form-group i {
+  right: 10px;
+  left: auto;
+}
+
+form .form-group .form-control {
+  text-align: left;
+}
+
+
+header .menu .menuLinks li {
+  margin-left: 25px;
+  margin-right: 0;
+}
+
+header .menu .leftDiv .lang {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.headerBg .absImg , .btnShape img.rotateArrow , span.icon-leftArrows {
+  transform: rotateY(-180deg);
+}
+
+.headerBg .cont .vedioDiv .watchVedio i{
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+header .menu .leftDiv .lang .dropdown-toggle img , header .menu .leftDiv .lang .bootstrap-select li a img{
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.downloadApp .rightDiv .appLinks a:first-child{
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+footer .footCont .social li{
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.downloadApp .downImg {
+  right: 65px;
+  left: auto;
+}
+
+.breadCrumbCont .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  padding-right: .5rem;
+}
+.registerBlock .whiteBg form .phoneFlag .form-group {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.breadCrumbCont .breadcrumb .breadcrumb-item a i {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.registerBlock .whiteBg form .registerAs .lightBlue img {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.registerBlock .whiteBg .changeImg .change i {
+  right: -5px;
+  left: auto;
+}
+
+.registerBlock .whiteBg .changeImg span {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.registerBlock .whiteBg .areaInputs .area i{
+  margin-left: 13px;
+  margin-right: 0;
+}
+
+.registerBlock .whiteBg .addArea i{
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.attaches .uploadImgBlock {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+.custom-checkbox {
+  padding-right: 0;
+  padding-left: 1.5rem;
+}
+
+
+.registerBlock .whiteBg .accordion .card-body .custom-checkbox{
+  margin-right: 25px;
+  margin-left: 0;
+}
+
+.custom-checkbox .custom-control-label::before ,.custom-checkbox .custom-control-label::after  {
+  left: -1.5rem;
+  right: auto;
+}
+
+header .leftDiv .noti .notiNum {
+  left: -5px;
+  right: auto;
+}
+header .leftDiv .profile img {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+header .leftDiv .profile {
+  margin: 0 0 0 15px;
+}
+
+.whoUsScreen .desc i{
+  margin-right: 5px;
+  margin-left: 0;
+  transform: rotateY(-180deg);
+}
+
+.faqs .accordion .card .card-header {
+  padding: 17px 50px 17px 17px;
+}
+
+.notifications a .iconCont{
+  left: 20px;
+  right: auto;
+}
+
+.faqs .accordion .card-header:after {
+  right: 10px;
+  left: auto;
+}
+
+.notifications a {
+  padding: 20px 25px 20px 95px;
+}
+
+.notifications a .info .time i , .profileCont .meetings .meeting .time i{
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.convBg .secondUser{
+  left: 100px;
+  right: auto;
+}
+
+.catDetailsCont .searchCont form .form-group .form-control {
+  padding-right: 45px;
+  padding-left: 10px;
+}
+
+
+.catDetailsCont .searchCont form .searchBtn , .registerBlock .whiteBg form .orangeWord {
+  right: 0;
+  left: auto;
+}
+
+.catDetailsCont .subCategories .cat .info{
+  border-right: 1px solid #ddd;
+  border-left: unset;
+  padding-right: 55px;
+  padding-left: 0;
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.catDetailsCont .subCategories .cat .info .imgCont , .profileCont .meetings .meeting .userImg
+, .profileCont .mainContentTab .expertDetails .whiteBg .comments li img , .groupBtns .btnShape:first-child{
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+
+.catDetailsCont .subCategories .cat.expert .expertImg , .expertDetails .whiteBg .expertInfo .expertImg
+ , .payMethods form .custom-radio label img{
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.expertDetails .whiteBg .desc li img{
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+
+.payMethods form .custom-radio{
+  padding: 0 0 0 20px;
+}
+
+
+.payMethods form .custom-radio .custom-control-label::before {
+  right: auto;
+  left: -35px;
+}
+.payMethods form .custom-radio .custom-control-label::after {
+  right: auto;
+  left: -32px;
+}
+
+
+.profileCont .nav .user img{
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.profileCont .mainContentTab {
+  margin-left: 30px;
+  margin-right: 0;
+}
+.profileCont .mainContentTab .innerTabsContent .vediosFilter .filter > span{
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.custom-switch {
+  padding-left: 2.25rem;
+  padding-right: 0;
+}
+
+
+.custom-switch .custom-control-label::before {
+  left: -2.25rem;
+  right: auto;
+}
+.custom-switch .custom-control-label::after {
+  left: calc(-2.25rem + 2px);
+  right: auto;
+}
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
+  -webkit-transform: translateX(.75rem);
+  transform: translateX(.75rem);
+}
+
+.custom-switch.custom-switch-lg .custom-control-input:checked ~ .custom-control-label::after {
+  transform: translateX(1rem);
+}
+
+.profileCont .mainContentTab .innerTabsContent .vedios .vedioItem .controls .moreDiv .absUl a i ,
+.profileCont .mainContentTab .expertDetails .whiteBg .comments li .time i{
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+
+.profileCont .mainContentTab .innerTabsContent .vedios .vedioItem .controls .moreDiv .absUl{
+  right: 0;
+  left: auto;
+}
+
+.profileCont .mainContentTab .innerTabsContent .vedios .vedioItem .controls .moreDiv .absUl:before{
+  right: 10px;
+  left: auto;
+}
+
+.registerBlock .whiteBg .inputsGroup .form-group:first-child {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+header .leftDiv .profile span {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.whiteBg .datesTime li i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.attaches .removeFile , .attaches .removeImage {
+  right: -9px;
+  left: auto;
+}
+.timeMeaning .info span{
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  header .leftDiv .profile {
+    margin: 5px 0;
+  }
+
+  header .menu {
+    text-align: left;
+    transform-origin: left;
+    left: -100%;
+    right: auto;
+  }
+  header .menu.ulDir {
+    left: 0;
+    right: auto;
+  }
+  header .menu .user img, header .menu .user i {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  header .menu .menuLinks li {
+    margin: 0 5px 15px;
+  }
+  header .menu .leftDiv .lang {
+    margin-left: 0;
+  }
+  header .overlay {
+    right: 0;
+    left: auto;
+    transform-origin: right;
+  }
+
+
+  .notifications a {
+    padding: 20px 25px 20px 75px;
+  }
+
+  .convBg .secondUser {
+    left: 30px;
+    right: auto;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .downloadApp .downImg {
+    right: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .menu .menuLinks li {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=styleRTL.css.map */

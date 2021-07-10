@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Hireshot</title>
+    <link rel="shortcut icon" href="img/svg.png">
+
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/hover.css" rel="stylesheet"/>
+    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="css/icomoon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--        <link href="css/styleRTL.css" rel="stylesheet" />-->
+
+</head>
+<body class="darkBodyBg">
+
+<!-- Start Loading Page -->
+
+<div class="layer-preloader">
+    <img src="img/logo.png" alt="logo">
+</div>
+
+<!-- End Loading Page -->
+
+
+<!--start opacityConfirmDiv-->
+<div class="opacityConfirmDiv">
+    <div class="whiteBg">
+        <img src="img/success.png"  alt="success">
+        <p>
+            <span>تم حذف المقابلة بنجاح</span>
+        </p>
+    </div>
+</div>
+<!--end opacityConfirmDiv-->
+
+<!--  Start Header  -->
+
+<header class="normalHeader whiteHeader">
+    <div class="container">
+
+        <div class="menuBar d-flex d-md-none justify-content-between align-items-center">
+            <a href="index.html">
+                <img src="img/logo.png" class="logo" alt="logo">
+            </a>
+            <div class="toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <div class="menu d-flex flex-wrap align-items-center">
+
+            <!--             if user login-->
+            <!--            <a href="profile.html" class="user d-md-none">-->
+            <!--                <img src="img/profile.png" class="img-fluid" alt="profile">-->
+            <!--                <p>-->
+            <!--                    أماني قاسم-->
+            <!--                </p>-->
+            <!--            </a>-->
+
+
+            <a href="index.html" class="d-none d-md-block">
+                <img src="img/logo.png" class="logo" alt="logo">
+            </a>
+
+            <ul class="menuLinks">
+                <li>
+                    <a href="providerHome.html">الرئيسية</a>
+                </li>
+                <li>
+                    <a href="whoUs.html">من نحن</a>
+                </li>
+                <li>
+                    <a href="categories.html">الأقسام</a>
+                </li>
+                <li>
+                    <a href="faqs.html">الاسئلة الشائعة</a>
+                </li>
+                <li>
+                    <a href="contactUs.html">تواصل معنا</a>
+                </li>
+            </ul>
+
+            <div class="leftDiv">
+
+                <!--                not auth-->
+                <!--                <a href="register.html" class="btnShape whiteBtn">انشاء حساب</a>-->
+                <!--                <a href="login.html" class="btnShape blueBtn">تسجيل دخول</a>-->
+
+                <!--                auth-->
+
+                <a href="providerNotification.html" class="hvr-glow noti">
+                    <i class="far fa-bell"></i>
+                    <span class="notiNum">3</span>
+                </a>
+
+                <a href="providerProfile.html" class="hvr-glow btnShape profile">
+                    <img src="img/pic.jpg" alt="profile image">
+                    أماني قاسم <span>( Experts )</span>
+                </a>
+
+
+                <div class="lang">
+                    <select class="selectpicker" data-width="fit">
+                        <option data-content='<img src="img/saudi-arabia.png" class="" alt="lang"> عربي'>عربي</option>
+                        <option data-content='<img src="img/saudi-arabia.png" class="" alt="lang"> English'>English</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</header>
+
+<!--end header-->
+
+
+<!--start breadCrumb-->
+<div class="breadCrumbCont">
+    <div class="container">
+
+        <h4>الملف الشخصي</h4>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="home.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li class="breadcrumb-item active" aria-current="page">الملف الشخصي</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!--end breadCrumb-->
+
+<div class="faqs">
+    <div class="container">
+
+        <div class="profileCont">
+
+            <div class="nav flex-column nav-pills mainNavTab" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+                <div class="user">
+                    <img src="img/pic.jpg" alt="user image">
+                    <span>أماني قاسم</span>
+                </div>
+
+                <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">الملف الشخصي</a>
+                <a class="nav-link" id="v-pills-meetings-tab" data-toggle="pill" href="#v-pills-meetings" role="tab" aria-controls="v-pills-meetings" aria-selected="false">مقابلاتي</a>
+                <a class="nav-link" id="v-pills-followMeetings-tab" data-toggle="pill" href="#v-pills-followMeetings" role="tab" aria-controls="v-pills-followMeetings" aria-selected="false">متابعة المواعيد</a>
+                <a class="nav-link" id="v-pills-categories-tab" data-toggle="pill" href="#v-pills-categories" role="tab" aria-controls="v-pills-categories" aria-selected="false">الاقسام</a>
+                <a class="nav-link" id="v-pills-dates-tab" data-toggle="pill" href="#v-pills-dates" role="tab" aria-controls="v-pills-dates" aria-selected="false">المواعيد</a>
+                <a class="nav-link" id="v-pills-meetingsType-tab" data-toggle="pill" href="#v-pills-meetingsType" role="tab" aria-controls="v-pills-meetingsType" aria-selected="false">انواع المقابلات</a>
+                <a class="nav-link" id="v-pills-rates-tab" data-toggle="pill" href="#v-pills-rates" role="tab" aria-controls="v-pills-rates" aria-selected="false">التقييمات</a>
+
+            </div>
+            <div class="tab-content mainContentTab" id="v-pills-tabContent">
+
+                <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+                    <ul class="nav innerTabsNav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-editProfile-tab" data-toggle="pill" href="#pills-editProfile" role="tab" aria-controls="pills-editProfile" aria-selected="true">تعديل حسابي</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-specialist-tab" data-toggle="pill" href="#pills-specialist" role="tab" aria-controls="pills-specialist" aria-selected="false">التخصصات</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content innerTabsContent" id="pills-tabContent">
+                        <div class="tab-pane fade show active whiteBodyBg registerBlock p-0" id="pills-editProfile" role="tabpanel" aria-labelledby="pills-editProfile-tab">
+                            <div class="whiteBg w-100 py-0">
+
+                                <form action="providerVerificationCode.html" class="profileForm posRelative">
+
+                                    <div class="orangeWord">
+                                        Experts
+                                    </div>
+
+                                    <div class="changeImg justify-content-center">
+                                        <div class="change img70">
+                                            <img src="img/content.png" alt="profile" class="rounded-circle">
+                                            <input class="file-upload" type="file" accept="image/*"/>
+                                            <i class="fas fa-camera orangeClr"></i>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="name">الاسم</label>
+                                        <input type="text" class="form-control" id="name" placeholder="برجاء ادخال الاسم" disabled>
+                                        <i class="far fa-edit size15 editInput"></i>
+                                    </div>
+
+                                    <div class="phoneFlag">
+                                        <div class="form-group">
+                                            <label for="phoneNum">رقم الجوال</label>
+                                            <input type="tel" class="form-control" id="phoneNum" placeholder="برجاء ادخال رقم الجوال">
+                                        </div>
+                                        <select class="selectpicker" data-width="fit">
+                                            <option data-content='<img src="img/saudi-arabia.png" class="" alt="lang">'></option>
+                                            <option data-content='<img src="img/saudi-arabia.png" class="" alt="lang">'></option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">البريد الالكتروني</label>
+                                        <input type="email" class="form-control" id="email" placeholder="الرجاء ادخال البريد الالكتروني" disabled>
+                                        <i class="far fa-edit size15 editInput"></i>
+                                    </div>
+
+                                    <div class="form-group formSelect">
+                                        <label for="country">البلد</label>
+                                        <select class="selectpicker" id="country" title="الرجاء تحديد البلد">
+                                            <option>مصر</option>
+                                            <option>السعودية</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="commercialDate">العمر</label>
+                                        <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+                                            <input class="form-control" type="text" id="commercialDate" placeholder="برجاء ادخال عمرك" readonly />
+                                            <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group select2Cont">
+                                        <label for="lang">اللغات</label>
+
+                                        <select class="form-control langSelector" id="lang" multiple="multiple">
+                                            <option selected>العربية</option>
+                                            <option selected>الانجليزية</option>
+                                            <option>الماني</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="companyHint">نبذة تعريفية</label>
+                                        <textarea class="form-control" id="companyHint" rows="5" placeholder="الرجاء ادخال نبذة تعريفية"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="attaches mt-4">
+
+                                            <div class="attaches">
+
+                                                <div class="uploadImgBlock">
+                                                    <div class="cont">
+                                                        <i class="fas fa-times-circle removeImage"></i>
+                                                        <img src="img/upload.png" alt="data">
+                                                        <input class="file-upload" type="file" accept="image/*"/>
+                                                    </div>
+                                                    <span class="title">الشهادات</span>
+                                                </div>
+
+                                                <div class="uploadImgBlock">
+                                                    <div class="cont">
+                                                        <i class="fas fa-times-circle removeImage"></i>
+                                                        <img src="img/upload.png" alt="data">
+                                                        <input class="file-upload" type="file" accept="image/*"/>
+                                                    </div>
+                                                    <span class="title">صورة الهوية</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <a class="btnShape grayBtn mt-4 mx-0 changePass">تغيير كلمة المرور</a>
+
+                                    <button type="submit" class="btnShape blueBtn mt-3">
+                                        حفظ التعديلات
+                                    </button>
+
+                                </form>
+
+                                <form action="" class="passwordForm">
+
+                                    <div class="form-group">
+                                        <label for="oldPassword">كلمة المرور القديمة</label>
+                                        <input type="password" class="form-control" id="oldPassword" placeholder="برجاء ادخال كلمة المرور القديمة">
+                                        <i class="far fa-eye toggle-password"></i>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="password">كلمة المرور الجديدة</label>
+                                        <input type="password" class="form-control" id="password" placeholder="برجاء ادخال كلمة المرور الجديدة">
+                                        <i class="far fa-eye toggle-password"></i>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="confirmPass">تأكيد كلمة المرور الجديدة</label>
+                                        <input type="password" class="form-control" id="confirmPass" placeholder="برجاء تأكيد كلمة المرور الجديدة">
+                                        <i class="far fa-eye toggle-password"></i>
+                                    </div>
+
+                                    <button type="submit" class="btnShape blueBtn mt-3 confirmPass">
+                                        حفظ التعديلات
+                                    </button>
+
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade whiteBodyBg registerBlock p-0" id="pills-specialist" role="tabpanel" aria-labelledby="pills-specialist-tab">
+                            <div class="whiteBg w-100 p-0">
+                                <form action="">
+
+                                    <ul class="specialist">
+
+                                        <li class="px-3">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <label class="custom-control-label" for="customCheck1">اسم التخصص</label>
+                                            </div>
+                                        </li>
+
+                                        <li class="px-3">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <label class="custom-control-label" for="customCheck2">اسم التخصص</label>
+                                            </div>
+
+                                            <div class="attaches">
+
+                                                <div class="uploadImgBlock mx-0">
+                                                    <div class="fileBlock">
+                                                        <i class="fas fa-times-circle removeFile"></i>
+                                                        <span class="title">ارفاق مرفق</span>
+                                                        <i class="icon-cloud-computing"></i>
+                                                        <input class="file-upload" type="file" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </li>
+
+                                        <li class="px-3">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                <label class="custom-control-label" for="customCheck3">اسم التخصص</label>
+                                            </div>
+                                        </li>
+
+                                        <li class="px-3">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                <label class="custom-control-label" for="customCheck4">اسم التخصص</label>
+                                            </div>
+
+                                            <div class="attaches">
+
+                                                <div class="uploadImgBlock mx-0">
+                                                    <div class="fileBlock">
+                                                        <i class="fas fa-times-circle removeFile"></i>
+                                                        <span class="title">ارفاق مرفق</span>
+                                                        <i class="icon-cloud-computing"></i>
+                                                        <input class="file-upload" type="file" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </li>
+
+
+                                        <li class="px-3">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                <label class="custom-control-label" for="customCheck5">اسم التخصص</label>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <button type="submit" class="btnShape blueBtn mt-3">
+                                        حفظ التعديلات
+                                    </button>
+
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-meetings" role="tabpanel" aria-labelledby="v-pills-meetings-tab">
+
+
+                    <ul class="nav innerTabsNav nav-pills mb-3" id="meetingPills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-currentMeeting-tab" data-toggle="pill" href="#pills-currentMeeting" role="tab" aria-controls="pills-currentMeeting" aria-selected="true">مقابلاتي الحالية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-finishedMeeting-tab" data-toggle="pill" href="#pills-finishedMeeting" role="tab" aria-controls="pills-finishedMeeting" aria-selected="false">مقابلاتي المنتهية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-rejectedMeeting-tab" data-toggle="pill" href="#pills-rejectedMeeting" role="tab" aria-controls="pills-rejectedMeeting" aria-selected="false">مقابلاتي الملغاة</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content innerTabsContent p-0" id="meetingPills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-currentMeeting" role="tabpanel" aria-labelledby="pills-currentMeeting-tab">
+                            <div class="darkBodyBg meetings w-100">
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-finishedMeeting" role="tabpanel" aria-labelledby="pills-finishedMeeting-tab">
+                            <div class="darkBodyBg meetings w-100">
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-rejectedMeeting" role="tabpanel" aria-labelledby="pills-rejectedMeeting-tab">
+                            <div class="darkBodyBg meetings w-100">
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="providerMeetingDetails.html" class="hvr-shadow meeting">
+
+                                    <img src="img/pic.jpg" class="userImg blur0" alt="user">
+
+                                    <div class="subInfo">
+                                        <div class="nameTime">
+                                            <h5>اماني قاسم</h5>
+                                            <span class="time">
+                                                <i class="icon-time"></i>
+                                                منذ ٥ دقائق
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="orderNum">
+                                                رقم الطلب : 12456
+                                            </span>
+                                            <span class="meetingDate">
+                                                موعد المقابلة :
+                                                <span>1 يناير 2021 / 9:00 م</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-followMeetings" role="tabpanel" aria-labelledby="v-pills-followMeetings-tab">
+
+                    <div class="followMeetingsCont">
+
+                        <div class="innerCont">
+                            <h5>متابعة المواعيد</h5>
+
+                            <div class="followMeetings">
+
+                                <div class="time aval">3:00 PM</div>
+                                <div class="time reserved">3:00 PM</div>
+                                <div class="time reserved">3:00 PM</div>
+                                <div class="time finished">3:00 PM</div>
+                                <div class="time aval">3:00 PM</div>
+                                <div class="time aval">3:00 PM</div>
+                                <div class="time reserved">3:00 PM</div>
+                                <div class="time finished">3:00 PM</div>
+                                <div class="time aval">3:00 PM</div>
+                                <div class="time reserved">3:00 PM</div>
+                                <div class="time finished">3:00 PM</div>
+                                <div class="time reserved">3:00 PM</div>
+                                <div class="time finished">3:00 PM</div>
+                                <div class="time aval">3:00 PM</div>
+                                <div class="time aval">3:00 PM</div>
+                                <div class="time reserved">3:00 PM</div>
+                                <div class="time finished">3:00 PM</div>
+                                <div class="time aval">3:00 PM</div>
+                                <div class="time reserved">3:00 PM</div>
+                                <div class="time finished">3:00 PM</div>
+
+                            </div>
+                        </div>
+
+                        <hr class="customHr">
+
+                        <div class="timeMeaning">
+
+                            <div class="info">
+                                <span class="aval"></span>
+                                متاح
+                            </div>
+
+                            <div class="info">
+                                <span class="reserved"></span>
+                                محجوز
+                            </div>
+
+                            <div class="info">
+                                <span class="finished"></span>
+                                منتهي او ملغي
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="tab-pane fade whiteBodyBg registerBlock p-0" id="v-pills-categories" role="tabpanel" aria-labelledby="v-pills-categories-tab">
+
+                    <div class="whiteBg w-100">
+
+                        <h5 class="textInitial blackClr w-100 fontBold">حدد الاقسام المناسبة لك</h5>
+
+                        <form action="">
+
+                            <ul class="specialist">
+
+                                <li class="px-3">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck11">
+                                        <label class="custom-control-label" for="customCheck11">تكنولوجيا</label>
+                                    </div>
+                                </li>
+
+
+                                <li class="px-3">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                        <label class="custom-control-label" for="customCheck12">رياده اعمال</label>
+                                    </div>
+                                </li>
+
+
+                                <li class="px-3">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                        <label class="custom-control-label" for="customCheck13">تصميم</label>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <button type="submit" class="btnShape blueBtn mb-0">
+                                حفظ التعديلات
+                            </button>
+
+
+                        </form>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-dates" role="tabpanel" aria-labelledby="v-pills-dates-tab">
+
+                   المواعيد
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-meetingsType" role="tabpanel" aria-labelledby="v-pills-meetingsType-tab">
+
+                    انواع المقابلات
+
+                </div>
+                <div class="tab-pane fade expertDetails" id="v-pills-rates" role="tabpanel" aria-labelledby="v-pills-rates-tab">
+
+                    <div class="whiteBg darkBodyBg mb-0">
+
+                        <ul class="comments">
+
+                            <li>
+
+                                <img src="img/pic.jpg" class="userImg" alt="user">
+
+                                <div>
+                                    <div class="topContent">
+
+                                        <div>
+                                            <h6>أماني قاسم</h6>
+                                            <div class="starsBlock">
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="time">
+                                        <i class="icon-time"></i>
+                                        منذ ٥ دقائق
+                                    </span>
+                                    </div>
+                                    <p>
+                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الاخري.
+                                    </p>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <img src="img/pic.jpg" class="userImg" alt="user">
+
+                                <div>
+                                    <div class="topContent">
+
+                                        <div>
+                                            <h6>أماني قاسم</h6>
+                                            <div class="starsBlock">
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="time">
+                                        <i class="icon-time"></i>
+                                        منذ ٥ دقائق
+                                    </span>
+                                    </div>
+                                    <p>
+                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الاخري.
+                                    </p>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <img src="img/pic.jpg" class="userImg" alt="user">
+
+                                <div>
+                                    <div class="topContent">
+
+                                        <div>
+                                            <h6>أماني قاسم</h6>
+                                            <div class="starsBlock">
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="time">
+                                        <i class="icon-time"></i>
+                                        منذ ٥ دقائق
+                                    </span>
+                                    </div>
+                                    <p>
+                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الاخري.
+                                    </p>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <img src="img/pic.jpg" class="userImg" alt="user">
+
+                                <div>
+                                    <div class="topContent">
+
+                                        <div>
+                                            <h6>أماني قاسم</h6>
+                                            <div class="starsBlock">
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star active"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="time">
+                                        <i class="icon-time"></i>
+                                        منذ ٥ دقائق
+                                    </span>
+                                    </div>
+                                    <p>
+                                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الاخري.
+                                    </p>
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer>
+    <div class="container d-flex justify-content-between flex-wrap">
+
+        <div class="footCont">
+            <img src="img/logo.png" alt="logo" class="logo">
+            <p>
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الاخري.
+            </p>
+            <ul class="social">
+                <li><a href="" class="hvr-float-shadow"><img src="img/twitter.png" alt="twitter"></a></li>
+                <li><a href="" class="hvr-float-shadow"><img src="img/youtube.png" alt="youtube"></a></li>
+                <li><a href="" class="hvr-float-shadow"><img src="img/facebook.png" alt="facebook"></a></li>
+                <li><a href="" class="hvr-float-shadow"><img src="img/google.png" alt="google"></a></li>
+            </ul>
+        </div>
+
+        <div class="footCont">
+            <h5 class="title">روابط سريعة</h5>
+            <ul class="links">
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="whoUs.html">من نحن</a></li>
+                <li><a href="">مميزاتنا</a></li>
+                <li><a href="contactUs.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+
+        <div class="footCont">
+            <h5 class="title">روابط سريعة</h5>
+            <ul class="links">
+                <li><a href="companyPrivileges.html">امتيازات الشركة</a></li>
+                <li><a href="providerPrivileges.html">امتيازات مقدم الخدمة</a></li>
+                <li><a href="faqs.html">الاسئلة الشائعة</a></li>
+                <li><a href="">الشروط والأحكام</a></li>
+            </ul>
+        </div>
+
+
+        <div class="footCont">
+            <h5 class="title">تواصل معنا</h5>
+            <ul class="links">
+                <li><a href="">الرياض - المملكة السعودية</a></li>
+                <li><a href="">+97937873424</a></li>
+                <li><a href="">aait@info.sa</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <hr class="customHr">
+    <div class="copyRight">
+        جميع الحقوق محفوظه &copy; لموقع <a href="">Hireshot</a>
+    </div>
+</footer>
+
+<!-- start scroll-top-->
+<div id="scroll-top" class="text-center">
+    <i class="fas fa-angle-up"></i>
+</div>
+<!-- end scroll-top-->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+
+<script>
+
+    // datepicker
+    $(function () {
+        $("#datepicker").datepicker({
+            autoclose: true,
+            todayHighlight: true
+        }).datepicker();
+    });
+
+</script>
+
+
+<!--start select-->
+<script>
+    $(".langSelector").select2({
+        tags: true,
+        placeholder: "الرجاء ادخال اللغات المناسبة للمقابلة",
+    });
+</script>
+<!--end select-->
+
+<!--toggle between profile form and password form-->
+
+<script>
+    $(".changePass").click(function() {
+        $('.profileForm').hide(500);
+        $('.passwordForm').show(500);
+    });
+    $(".confirmPass").click(function(e) {
+        e.preventDefault();
+        $('.profileForm').show(500);
+        $('.passwordForm').hide(500);
+    });
+</script>
+
+<!--toggle vedio delete & share-->
+
+<script>
+    $(".moreIcon").click(function() {
+        $(this).next('.profileCont .mainContentTab .moreDiv .absUl').fadeToggle(500);
+    });
+</script>
+
+<!--start show loader to navigate-->
+<script>
+    $(".confirmDelete").click(function(e) {
+        e.preventDefault();
+        $('.opacityConfirmDiv').fadeIn().css('display','flex')
+        var delay = 2000;
+        var url = 'home.html'
+        setTimeout(function(){ $('.opacityConfirmDiv').fadeIn().css('display','none'); }, delay);
+    });
+
+</script>
+<!--end show loader to navigate-->
+
+</body>
+</html>
