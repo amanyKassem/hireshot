@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Hireshot</title>
+    <link rel="shortcut icon" href="img/svg.png">
+
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/hover.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/icomoon.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <!--    to load google font faster-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--        <link href="css/styleRTL.css" rel="stylesheet" />-->
+
+</head>
+<body>
+
+
+<!--start opacityConfirmDiv-->
+<div class="opacityConfirmDiv">
+    <div class="whiteBg">
+        <img src="img/success.png"  alt="success">
+        <p>
+            تهانينا
+            <span>تم انهاء المقابلة بنجاح</span>
+        </p>
+    </div>
+</div>
+<!--end opacityConfirmDiv-->
+
+
+
+<div class="convBg">
+    <img src="img/pic.jpg" class="firstUser" alt="user image">
+    <img src="img/content.png" class="secondUser" alt="user image">
+
+    <div class="controlsCont">
+        <div class="controls">
+
+            <a class="hvr-float-shadow noCamera">
+                <img src="img/noCamera.png" alt="no camera">
+            </a>
+
+            <a class="hvr-float-shadow switchCamera">
+                <img src="img/switchCamera.png" alt="switch camera">
+            </a>
+
+            <a class="hvr-float-shadow microphone">
+                <img src="img/microphone.png" alt="microphone">
+            </a>
+
+            <a class="hvr-float-shadow mute">
+                <img src="img/mute.png" alt="mute">
+            </a>
+
+        </div>
+
+        <a class="hvr-float-shadow declineCall confirmDecline" >
+            <img src="img/declineCall.png" alt="decline call">
+        </a>
+
+    </div>
+
+</div>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+
+<!--start show loader to navigate-->
+<script>
+    $(".confirmDecline").click(function(e) {
+        e.preventDefault();
+        $('.opacityConfirmDiv').fadeIn().css('display','flex')
+        var delay = 2000;
+        var url = 'companyHome.html'
+        setTimeout(function(){ window.location = url; }, delay);
+    });
+
+</script>
+<!--end show loader to navigate-->
+
+</body>
+</html>

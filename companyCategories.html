@@ -16,7 +16,7 @@
     <link href="css/style.css" rel="stylesheet"/>
     <!--    to load google font faster-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
+    <!--        <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
 <body class="darkBodyBg">
@@ -49,7 +49,7 @@
         <div class="menu d-flex flex-wrap align-items-center">
 
             <!--             if user login-->
-            <!--            <a href="profile.html" class="user d-md-none">-->
+            <!--            <a href="companyProfile.html" class="user d-md-none">-->
             <!--                <img src="img/profile.png" class="img-fluid" alt="profile">-->
             <!--                <p>-->
             <!--                    أماني قاسم-->
@@ -63,13 +63,13 @@
 
             <ul class="menuLinks">
                 <li>
-                    <a href="index.html">الرئيسية</a>
+                    <a href="providerHome.html">الرئيسية</a>
                 </li>
                 <li>
                     <a href="whoUs.html">من نحن</a>
                 </li>
-                <li>
-                    <a href="categories.html">الأقسام</a>
+                <li class="active">
+                    <a href="companyCategories.html">الأقسام</a>
                 </li>
                 <li>
                     <a href="faqs.html">الاسئلة الشائعة</a>
@@ -82,20 +82,20 @@
             <div class="leftDiv">
 
                 <!--                not auth-->
-                <a href="register.html" class="btnShape whiteBtn">انشاء حساب</a>
-                <a href="login.html" class="btnShape blueBtn">تسجيل دخول</a>
+                <!--                <a href="register.html" class="btnShape whiteBtn">انشاء حساب</a>-->
+                <!--                <a href="login.html" class="btnShape blueBtn">تسجيل دخول</a>-->
 
                 <!--                auth-->
 
-                <!--                <a href="notification.html" class="hvr-glow noti">-->
-                <!--                    <i class="far fa-bell"></i>-->
-                <!--                    <span class="notiNum">3</span>-->
-                <!--                </a>-->
+                <a href="companyNotification.html" class="hvr-glow noti">
+                    <i class="far fa-bell"></i>
+                    <span class="notiNum">3</span>
+                </a>
 
-                <!--                <a href="profile.html" class="hvr-glow btnShape profile">-->
-                <!--                    <img src="img/pic.jpg" alt="profile image">-->
-                <!--                    الملف الشخصي-->
-                <!--                </a>-->
+                <a href="companyProfile.html" class="hvr-glow btnShape profile">
+                    <img src="img/pic.jpg" alt="profile image">
+                    الملف الشخصي
+                </a>
 
 
                 <div class="lang">
@@ -114,53 +114,136 @@
 
 <!--end header-->
 
+
 <!--start breadCrumb-->
 <div class="breadCrumbCont">
     <div class="container">
 
-        <h4>انشاء حساب</h4>
+        <h4>الاقسام</h4>
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
-                <li class="breadcrumb-item active" aria-current="page">انشاء حساب</li>
+                <li class="breadcrumb-item"><a href="companyHome.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li class="breadcrumb-item active" aria-current="page">الاقسام</li>
             </ol>
         </nav>
     </div>
 </div>
 <!--end breadCrumb-->
 
-
-<!--start registerBlock-->
-<div class="registerBlock">
+<!--start categoriesBlock-->
+<div class="categoriesBlock categoriesScreen">
     <div class="container">
 
-        <div class="whiteBg">
+        <div class="categories">
 
-            <img src="img/success.png" class="greenCheck"  alt="success">
+            <div class="catItem">
+                <img src="img/cat1.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="catItem">
+                <img src="img/cat2.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="catItem">
+                <img src="img/cat3.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="catItem">
+                <img src="img/cat4.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
 
-            <h3 class="mainTitle">
-                تم ارسال بياناتك للادارة بنجاح
-            </h3>
-            <p class="mainP maxW">
-                تهانينا تم ارسال بياناتك لاداره التطبيق بنجاح للمراجعه وسيتم ارسال اشعار عند قبولك في التطبيق
-            </p>
-
-
-<!--            link for provider on create new category-->
-            <a href="index.html" class="btnShape blueBtn w-100 justify-content-center mb-3">رجوع</a>
-
-<!--            link for provider on register next step-->
-            <a href="meetingType.html" class="btnShape blueBtn w-100 justify-content-center mb-3">رجوع</a>
-
-<!--            link for company-->
-            <a href="companyHome.html" class="btnShape blueBtn w-100 justify-content-center">رجوع</a>
+            <div class="catItem">
+                <img src="img/cat1.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="catItem">
+                <img src="img/cat2.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="catItem">
+                <img src="img/cat3.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="catItem">
+                <img src="img/cat4.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="catItem">
+                <img src="img/cat3.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="catItem">
+                <img src="img/cat4.png" alt="category">
+                <div class="opacityDiv">
+                    <h5 class="title">تصميم الجرافيك</h5>
+                    <a href="companyCategoryDetails.html">
+                        اظهار المزيد
+                        <span class="icon-left-arow"></span>
+                    </a>
+                </div>
+            </div>
 
         </div>
 
     </div>
 </div>
-<!--end registerBlock-->
+<!--end categoriesBlock-->
 
 <footer>
     <div class="container d-flex justify-content-between flex-wrap">
@@ -181,7 +264,7 @@
         <div class="footCont">
             <h5 class="title">روابط سريعة</h5>
             <ul class="links">
-                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="home.html">الرئيسية</a></li>
                 <li><a href="whoUs.html">من نحن</a></li>
                 <li><a href="">مميزاتنا</a></li>
                 <li><a href="contactUs.html">تواصل معنا</a></li>
@@ -230,8 +313,6 @@
 <script>
     new WOW().init();
 </script>
-
-
 
 </body>
 </html>

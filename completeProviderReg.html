@@ -11,7 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/hover.css" rel="stylesheet"/>
     <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
     <link href="css/animate.css" rel="stylesheet"/>
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -177,11 +177,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="commercialDate">العمر</label>
-                    <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
-                        <input class="form-control" type="text" id="commercialDate" placeholder="برجاء ادخال عمرك" readonly />
-                        <span class="input-group-addon"><i class="icon-calender"></i></span>
-                    </div>
+                    <label for="datepicker">العمر</label>
+                    <input type="text" class="form-control datetimepicker-input transparentBg"
+                           id="datepicker" data-toggle="datetimepicker" data-target="#datepicker"
+                           placeholder="برجاء ادخال عمرك"/>
+                    <i class="icon-calender zIndex0"></i>
                 </div>
 
                 <div class="form-group select2Cont">
@@ -317,7 +317,8 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
@@ -331,10 +332,9 @@
 
     // datepicker
     $(function () {
-        $("#datepicker").datepicker({
-            autoclose: true,
-            todayHighlight: true
-        }).datepicker();
+        $('#datepicker').datetimepicker({
+            format: 'L',
+        });
     });
 
 

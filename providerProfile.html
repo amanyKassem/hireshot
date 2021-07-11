@@ -9,12 +9,13 @@
 
     <link href="css/all.min.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
     <link href="css/hover.css" rel="stylesheet"/>
     <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
     <link href="css/animate.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <link href="css/style.css" rel="stylesheet"/>
     <!--    to load google font faster-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -147,7 +148,7 @@
 <div class="faqs">
     <div class="container">
 
-        <div class="profileCont">
+        <div class="profileCont profileWithPicker">
 
             <div class="nav flex-column nav-pills mainNavTab" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
@@ -228,11 +229,11 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="commercialDate">العمر</label>
-                                        <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
-                                            <input class="form-control" type="text" id="commercialDate" placeholder="برجاء ادخال عمرك" readonly />
-                                            <span class="input-group-addon"><i class="icon-calender"></i></span>
-                                        </div>
+                                        <label for="datepicker">العمر</label>
+                                        <input type="text" class="form-control datetimepicker-input transparentBg"
+                                               id="datepicker" data-toggle="datetimepicker" data-target="#datepicker"
+                                        placeholder="الرجاء تحديد العمر"/>
+                                        <i class="icon-calender zIndex0"></i>
                                     </div>
 
 
@@ -752,14 +753,75 @@
                     </div>
 
                 </div>
-                <div class="tab-pane fade" id="v-pills-dates" role="tabpanel" aria-labelledby="v-pills-dates-tab">
+                <div class="tab-pane fade registerBlock p-0" id="v-pills-dates" role="tabpanel" aria-labelledby="v-pills-dates-tab">
 
-                   المواعيد
+                    <div class="whiteBg mb-0 w-100 px-4 px-md-5">
+
+                        <form action="" class="w-100 px-lg-5">
+
+                            <h3 class="mainTitle mb-4">
+                                مواعيد المقابلات
+                            </h3>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control datetimepicker-input transparentBg"
+                                       id="meetingDates" data-toggle="datetimepicker" data-target="#meetingDates" />
+                                <i class="icon-calender zIndex0"></i>
+                            </div>
+
+                            <ul class="meetingDates datesTime">
+
+                            </ul>
+                            <button type="submit" class="btnShape blueBtn mt-3">
+                                حفظ التعديلات
+                            </button>
+                        </form>
+
+                    </div>
 
                 </div>
-                <div class="tab-pane fade" id="v-pills-meetingsType" role="tabpanel" aria-labelledby="v-pills-meetingsType-tab">
+                <div class="tab-pane fade whiteBodyBg registerBlock p-0" id="v-pills-meetingsType" role="tabpanel" aria-labelledby="v-pills-meetingsType-tab">
 
-                    انواع المقابلات
+                    <div class="whiteBg w-100">
+
+                        <h5 class="textInitial blackClr w-100 fontBold">حدد نوع المقابلة</h5>
+
+                        <form action="">
+
+                            <ul class="specialist">
+
+                                <li class="px-3">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck21">
+                                        <label class="custom-control-label" for="customCheck21">تدريب</label>
+                                    </div>
+                                </li>
+
+
+                                <li class="px-3">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck22">
+                                        <label class="custom-control-label" for="customCheck22">مقابلة رسمية</label>
+                                    </div>
+                                </li>
+
+
+                                <li class="px-3">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck23">
+                                        <label class="custom-control-label" for="customCheck23">الاثنين معا</label>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <button type="submit" class="btnShape blueBtn mb-0">
+                                حفظ التعديلات
+                            </button>
+
+
+                        </form>
+                    </div>
 
                 </div>
                 <div class="tab-pane fade expertDetails" id="v-pills-rates" role="tabpanel" aria-labelledby="v-pills-rates-tab">
@@ -962,8 +1024,9 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
 <script>
@@ -975,11 +1038,55 @@
 
     // datepicker
     $(function () {
-        $("#datepicker").datepicker({
-            autoclose: true,
-            todayHighlight: true
-        }).datepicker();
+
+        $('#meetingDates').datetimepicker({
+            icons: {
+                time: 'far fa-clock',
+                date: 'far fa-calendar',
+                up: 'fas fa-arrow-up',
+                down: 'fas fa-arrow-down',
+                previous: 'fas fa-chevron-left',
+                next: 'fas fa-chevron-right',
+                today: 'fas fa-calendar-check',
+                clear: 'far fa-trash-alt',
+                close: 'far fa-times-circle'
+            },
+        });
+
+        $('#datepicker').datetimepicker({
+            format: 'L',
+        });
     });
+
+    // append meetingDates
+
+    var meetingDateTime = [];
+
+    $('#meetingDates').on('hide.datetimepicker', function(e){
+        var formatedValue = e.date.format(e.date._f);
+        meetingDateTime.push(formatedValue)
+        $(".meetingDates").html('')
+
+        for (var j in meetingDateTime) {
+            var appendLi = " <li class='date'>" + meetingDateTime[j] + " <i class='icon-trash removeMeetingDate' data-date='"+meetingDateTime[j]+"'></i></li>"
+            $(".meetingDates").append(appendLi);
+        }
+    })
+
+
+
+    // remove meetingDates
+    $('body').on('click', '.removeMeetingDate', function() {
+
+        var index = meetingDateTime.indexOf($(this).data('date'));
+
+        if (index > -1) {
+            meetingDateTime.splice(index, 1);
+        }
+
+        $(this).parent().remove();
+    });
+
 
 </script>
 

@@ -343,6 +343,10 @@ header .leftDiv .profile span {
   margin-left: 0;
 }
 
+.packages a img {
+  margin: 0 25px 0 0;
+}
+
 @media (max-width: 767px) {
   header .leftDiv .profile {
     margin: 5px 0;

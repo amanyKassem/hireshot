@@ -36,6 +36,12 @@
   font-family: 'myFontRegular' !important;
 }
 
+
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  width: auto !important;
+}
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #454545;
@@ -2787,8 +2793,16 @@ footer .copyRight a:hover{
 .profileCont .mainContentTab .table tr{
   display: flex;
 }
+
+.profileCont.profileWithPicker .mainContentTab .table tr {
+  display: table-row;
+}
+
 .profileCont .mainContentTab .table td{
   color: var(--grayClr);
+}
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover{
+  color: #fff !important;
 }
 .profileCont .mainContentTab .table .price{
   color: var(--blueClr);
@@ -2798,6 +2812,11 @@ footer .copyRight a:hover{
   padding: 17px;
   text-align: center;
   flex: 1;
+}
+
+.profileCont.profileWithPicker .mainContentTab .table td, .profileCont.profileWithPicker .mainContentTab .table th {
+  flex: unset;
+  padding: .3rem;
 }
 
 .profileCont .meetings .meeting p {
@@ -2945,6 +2964,45 @@ footer .copyRight a:hover{
 
 
 /*end followMeetingsCont*/
+
+/*start subscription*/
+
+.subscription img {
+  width: 340px;
+  height: 400px;
+}
+.packages{
+
+}
+
+.packages a{
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 25px;
+  background: #fff;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.packages a:hover , .packages .activePackage{
+  border-color: #fef6e8;
+  background: #fef6e8;
+}
+.packages a img {
+  width: 85px;
+  height: 85px;
+  margin: 0 0 0 25px;
+}
+.packages a .title {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+.packages a .desc {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+/*end subscription*/
+
 
 
 /* Start Media Query */
@@ -3526,6 +3584,15 @@ footer .copyRight a:hover{
   }
 
   .timeMeaning .info {
+    margin-bottom: 10px;
+  }
+
+  .modal .disModal .controlsBtn {
+    flex-direction: column;
+  }
+  .modal .disModal .controlsBtn .btnShape {
+    flex: unset;
+    width: 100%;
     margin-bottom: 10px;
   }
 
