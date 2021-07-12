@@ -71,7 +71,7 @@ header .menu .menuLinks li {
   margin-right: 0;
 }
 
-header .menu .leftDiv .lang {
+header .menu .leftDiv .lang , .profileCont .mainNavTab .user .packageImg {
   margin-left: 10px;
   margin-right: 0;
 }
@@ -80,12 +80,13 @@ header .menu .leftDiv .lang {
   transform: rotateY(-180deg);
 }
 
-.headerBg .cont .vedioDiv .watchVedio i{
+.headerBg .cont .vedioDiv .watchVedio i , .expertDetails .whiteBg .social i{
   margin-right: 10px;
   margin-left: 0;
 }
 
-header .menu .leftDiv .lang .dropdown-toggle img , header .menu .leftDiv .lang .bootstrap-select li a img{
+header .menu .leftDiv .lang .dropdown-toggle img , header .menu .leftDiv .lang .bootstrap-select li a img
+, .expertDetails .whiteBg .sendOrder i {
   margin-right: 5px;
   margin-left: 0;
 }
@@ -343,8 +344,13 @@ header .leftDiv .profile span {
   margin-left: 0;
 }
 
-.packages a img {
+.packageLink img {
   margin: 0 25px 0 0;
+}
+
+.convBg .closeVedio {
+  right: 50px;
+  left: auto;
 }
 
 @media (max-width: 767px) {
@@ -386,6 +392,11 @@ header .leftDiv .profile span {
   .convBg .secondUser {
     left: 30px;
     right: auto;
+  }
+
+
+  .convBg .closeVedio {
+    right: 20px;
   }
 
 }

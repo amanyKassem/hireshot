@@ -16,7 +16,7 @@
     <link href="css/style.css" rel="stylesheet"/>
     <!--    to load google font faster-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
+    <!--        <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
 <body class="darkBodyBg">
@@ -29,6 +29,18 @@
 
 <!-- End Loading Page -->
 
+<!--start opacityConfirmDiv-->
+<div class="opacityConfirmDiv">
+    <div class="whiteBg">
+        <img src="img/success.png"  alt="success">
+        <p>
+            تهانينا
+            <span>تم الاشتراك في الباقة بنجاح</span>
+        </p>
+    </div>
+</div>
+<!--end opacityConfirmDiv-->
+
 
 <!--  Start Header  -->
 
@@ -36,7 +48,7 @@
     <div class="container">
 
         <div class="menuBar d-flex d-md-none justify-content-between align-items-center">
-            <a href="index.html">
+            <a href="companyHome.html">
                 <img src="img/logo.png" class="logo" alt="logo">
             </a>
             <div class="toggle">
@@ -49,7 +61,7 @@
         <div class="menu d-flex flex-wrap align-items-center">
 
             <!--             if user login-->
-            <!--            <a href="profile.html" class="user d-md-none">-->
+            <!--            <a href="companyProfile.html" class="user d-md-none">-->
             <!--                <img src="img/profile.png" class="img-fluid" alt="profile">-->
             <!--                <p>-->
             <!--                    أماني قاسم-->
@@ -57,19 +69,19 @@
             <!--            </a>-->
 
 
-            <a href="index.html" class="d-none d-md-block">
+            <a href="companyHome.html" class="d-none d-md-block">
                 <img src="img/logo.png" class="logo" alt="logo">
             </a>
 
             <ul class="menuLinks">
                 <li>
-                    <a href="providerHome.html">الرئيسية</a>
+                    <a href="companyHome.html">الرئيسية</a>
                 </li>
                 <li>
                     <a href="whoUs.html">من نحن</a>
                 </li>
-                <li>
-                    <a href="categories.html">الأقسام</a>
+                <li class="active">
+                    <a href="companyCategories.html">الأقسام</a>
                 </li>
                 <li>
                     <a href="faqs.html">الاسئلة الشائعة</a>
@@ -87,14 +99,14 @@
 
                 <!--                auth-->
 
-                <a href="providerNotification.html" class="hvr-glow noti">
+                <a href="companyNotification.html" class="hvr-glow noti">
                     <i class="far fa-bell"></i>
                     <span class="notiNum">3</span>
                 </a>
 
-                <a href="providerProfile.html" class="hvr-glow btnShape profile">
+                <a href="companyProfile.html" class="hvr-glow btnShape profile">
                     <img src="img/pic.jpg" alt="profile image">
-                    أماني قاسم <span>( Experts )</span>
+                    الملف الشخصي
                 </a>
 
 
@@ -114,45 +126,81 @@
 
 <!--end header-->
 
+
+
 <!--start breadCrumb-->
 <div class="breadCrumbCont">
     <div class="container">
 
-        <h4>الملف الشخصي</h4>
+        <h4>تصميم الجرافيك</h4>
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="home.html"><i class="fas fa-home"></i> الرئيسية</a></li>
-                <li class="breadcrumb-item active" aria-current="page">الملف الشخصي</li>
+                <li class="breadcrumb-item"><a href="companyHome.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li class="breadcrumb-item"><a href="companyCategoryDetails.html">تصميم الجرافيك</a></li>
+                <li class="breadcrumb-item active" aria-current="page">باقات الاشتراك</li>
             </ol>
         </nav>
     </div>
 </div>
 <!--end breadCrumb-->
 
-
-<!--start registerBlock-->
-<div class="registerBlock">
+<div class="registerBlock reservationBlock payMethods">
     <div class="container">
 
         <div class="whiteBg">
-
-            <img src="img/success.png" class="greenCheck"  alt="success">
-
             <h3 class="mainTitle">
-                تم ارسال بياناتك للادارة بنجاح
+                طريقة الدفع
             </h3>
-            <p class="mainP maxW">
-                تهانينا تم ارسال بياناتك لاداره التطبيق بنجاح للمراجعه وسيتم ارسال اشعار عند قبولك في التطبيق
+            <p class="mainP">
+                برجاء تحديد طريقة الدفع حتي يتم اكتمال الحجز بنجاح
             </p>
 
-            <a href="providerHome.html" class="btnShape blueBtn w-100 justify-content-center mb-3">رجوع</a>
+            <form action="">
 
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="visa" name="radio-group" class="custom-control-input">
+                    <label for="visa" class="custom-control-label">
+                        <img src="img/visa.png" alt="visa">
+                        <div class="info">
+                            <h5>فيزا</h5>
+                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="masterCard" name="radio-group" class="custom-control-input">
+                    <label for="masterCard" class="custom-control-label">
+                        <img src="img/master.png" alt="visa">
+                        <div class="info">
+                            <h5>ماستر كارد</h5>
+                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="mada" name="radio-group" class="custom-control-input">
+                    <label for="mada" class="custom-control-label">
+                        <img src="img/mada.png" alt="visa">
+                        <div class="info">
+                            <h5>مدي</h5>
+                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة</p>
+                        </div>
+                    </label>
+                </div>
+
+                <button type="submit" class="btnShape blueBtn confirmForm">
+                    تأكيد الدفع
+                </button>
+
+
+            </form>
         </div>
 
     </div>
 </div>
-<!--end registerBlock-->
+
+
 
 <footer>
     <div class="container d-flex justify-content-between flex-wrap">
@@ -173,7 +221,7 @@
         <div class="footCont">
             <h5 class="title">روابط سريعة</h5>
             <ul class="links">
-                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="home.html">الرئيسية</a></li>
                 <li><a href="whoUs.html">من نحن</a></li>
                 <li><a href="">مميزاتنا</a></li>
                 <li><a href="contactUs.html">تواصل معنا</a></li>
@@ -221,6 +269,18 @@
 <script src="js/scripts.js"></script>
 
 
+<!--start show loader to navigate-->
+<script>
+    $(".confirmForm").click(function(e) {
+        e.preventDefault();
+        $('.opacityConfirmDiv').fadeIn().css('display','flex')
+        var delay = 2000;
+        var url = 'users.html'
+        setTimeout(function(){ window.location = url; }, delay);
+    });
+
+</script>
+<!--end show loader to navigate-->
 
 </body>
 </html>
